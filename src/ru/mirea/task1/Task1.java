@@ -136,6 +136,7 @@ public class Task1 {
         //Задание 8
         System.out.println("Факториал числа 6: " + Factorial(6));
     }
+    //
 }
 
 
