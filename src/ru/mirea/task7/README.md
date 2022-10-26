@@ -7,7 +7,7 @@
 
 ## Задание на практическую работу
 
-1. Прочитайте UML-диаграмму Shape.jpg: на диаграмме представлены абстрактный суперкласс Shape и его подклассы Circle, Rectangle and Square.
+1. Прочитайте UML-диаграмму ru.mirea.task5.Shape.jpg: на диаграмме представлены абстрактный суперкласс ru.mirea.task5.Shape и его подклассы Circle, Rectangle and Square.
 
    > Прим.
 >
@@ -19,21 +19,21 @@
 >
    > ~ Package
 
-2. Создайте абстрактный родительский суперкласс Shape и его дочерние классы (подклассы).
+2. Создайте абстрактный родительский суперкласс ru.mirea.task5.Shape и его дочерние классы (подклассы).
 
-3. Перепишите суперкласс Shape и его подклассы так, как это представлено на UML-диаграмме Circle, Rectangle and Square.
+3. Перепишите суперкласс ru.mirea.task5.Shape и его подклассы так, как это представлено на UML-диаграмме Circle, Rectangle and Square.
 
-   > В этом задании класс Shape определяется как абстрактный класс:
+   > В этом задании класс ru.mirea.task5.Shape определяется как абстрактный класс:
    > • Два поля или переменные класса объявлены с модификатором protected color (тип String) и filled (тип boolean). Такие защищенные переменные могут быть доступны в подклассах и классах в одном пакете. Они обозначаются со знаком “#” на диаграмме классов в нотации языка UML.
    > • Геттеры и сеттеры для всех переменных экземпляра класса, метод toString().
    > • Два абстрактных метода getArea() и getPerimeter() выделены курсивом в диаграмме класса. В подклассах Circle (круг) и Rectangle (прямоугольник) должны переопределяться абстрактные методы getArea() и getPerimeter(), чтобы обеспечить их надлежащее выполнение для конкретных экземпляров типа подкласс. Также необходимо для каждого подкласса переопределить toString() .
 
-   ![](Shape.jpg)
+   ![](ru.mirea.task5.Shape.jpg)
 
 4. Вам нужно написать тестовый класс, чтобы самостоятельно проверить код ниже. Необходимо объяснить полученные результаты и связать их с понятием ООП - полиморфизм. Некоторые объявления могут вызвать ошибки компиляции. Объясните полученные ошибки, если таковые имеются.
 
    ```java
-   Shape s1 = new Circle(5.5, "RED", false); // Upcast Circle to Shape
+   ru.mirea.task5.Shape s1 = new Circle(5.5, "RED", false); // Upcast Circle to ru.mirea.task5.Shape
    System.out.println(s1); // which version?
    System.out.println(s1.getArea()); // which version?
    System.out.println(s1.getPerimeter()); // which version?
@@ -47,8 +47,8 @@
    System.out.println(c1.getColor());
    System.out.println(c1.isFilled());
    System.out.println(c1.getRadius());
-   Shape s2 = new Shape();
-   Shape s3 = new Rectangle(1.0, 2.0, "RED", false); // Upcast
+   ru.mirea.task5.Shape s2 = new ru.mirea.task5.Shape();
+   ru.mirea.task5.Shape s3 = new Rectangle(1.0, 2.0, "RED", false); // Upcast
    System.out.println(s3);
    System.out.println(s3.getArea());
    System.out.println(s3.getPerimeter());
@@ -59,12 +59,12 @@
    System.out.println(r1.getArea());
    System.out.println(r1.getColor());
    System.out.println(r1.getLength());
-   Shape s4 = new Square(6.6); // Upcast
+   ru.mirea.task5.Shape s4 = new Square(6.6); // Upcast
    System.out.println(s4);
    System.out.println(s4.getArea());
    System.out.println(s4.getColor());
    System.out.println(s4.getSide());
-   // Take note that we downcast Shape s4 to Rectangle,
+   // Take note that we downcast ru.mirea.task5.Shape s4 to Rectangle,
    // which is a superclass of Square, instead of Square
    Rectangle r2 = (Rectangle)s4;
    System.out.println(r2);
@@ -81,19 +81,19 @@
    System.out.println(sq1.getLength());
    ```
 
-5. Напишите два класса MovablePoint и MovableCircle - которые реализуют интерфейс Movable.
+5. Напишите два класса ru.mirea.task4.MovablePoint и ru.mirea.task4.MovableCircle - которые реализуют интерфейс ru.mirea.task4.Movable.
 
-   ![](Movable.jpg)
+   ![](ru.mirea.task4.Movable.jpg)
 
    ```java
-   public interface Movable {
-   // saved as "Movable.java"
+   public interface ru.mirea.task4.Movable {
+   // saved as "ru.mirea.task4.Movable.java"
    public void moveUp();
    ......
    }
    ```
 
-6. Напишите новый класс MovableRectangle (движущийся прямоугольник). Его можно представить, как две движущиеся точки MovablePoints (верхняя левая и нижняя правая точки) и реализующие интерфейс Movable. Убедитесь, что две точки имеет одну и ту же скорость.
+6. Напишите новый класс MovableRectangle (движущийся прямоугольник). Его можно представить, как две движущиеся точки MovablePoints (верхняя левая и нижняя правая точки) и реализующие интерфейс ru.mirea.task4.Movable. Убедитесь, что две точки имеет одну и ту же скорость.
 
    ![](MovableRectangle.jpg)
 
